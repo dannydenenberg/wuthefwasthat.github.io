@@ -5,6 +5,13 @@ date:   2013-03-21 10:18:32 -0700
 categories: computer science
 ---
 
+<style>
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
 Shafi Goldwasser and Silvio Micali won the Turing Award recently, for their foundational work in cryptography.  
 I had the pleasure of working with Silvio (as his TA and as his student) while at MIT,
 where he gave many of the most memorable and motivated lectures I've been part of.
