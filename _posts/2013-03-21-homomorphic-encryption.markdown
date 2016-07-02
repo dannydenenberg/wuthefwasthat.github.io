@@ -16,33 +16,31 @@ Shafi Goldwasser and Silvio Micali won the Turing Award recently, for their foun
 I had the pleasure of working with Silvio (as his TA and as his student) while at MIT,
 where he gave many of the most memorable and motivated lectures I've been part of.
 
-In Silvio's honor, I'm writing a post which tries to teach some cryptography.
-I can't hope to be as entertaining or lucid as Silvio, 
-but my goal is to illustrate clearly, but to an even less technical audience.
+In their honor, I'm writing a post which tries to teach some cryptography, to an even less technical audience.
+The topic I chose was Gentry's construction of homomorphic encryption, for a few reasons:
 
-The topic I chose was Gentry's construction of homomorphic encryption, for the following reasons:
-
-- I presented on this topic in the past
 - It was a huge breakthrough in cryptography
-- It has a very nice proof idea, which I believe can be well-illustrated to a non-expert (though I may not succeed at it).
-  Ive not seen this done elsewhere
-- In particular, I've not heard Micali lecture about it
+- It has a very nice proof idea
+- I believe it can be well-illustrated to one with just high-school level math background
+  (though I may not succeed at it)
+- I've not seen a similar explanation attempted.
+  (In particular, I've not heard Micali lecture about it)
 
 ## Intro to encryption
 
-Before we can talk about homomorphic encryption, we should explain encryption.
+Before we can talk about homomorphic encryption, we should talk about regular encryption.
 
 ### History
 
 Encryption in one form or another has been used for thousands of years.
 Notably, governments used ciphers to pass war messages.
 
-In the 70s, it became much more commonplace, thanks to a scheme called RSA.
-Perhaps the most famous scheme, RSA was developed by and named after another group of Turing award winners
-(including Rivest who I also TAed for!).
-Later, Micali and Goldwasser formally defined security for such schemes.
+In the 70s, it became much more commonplace, thanks to RSA, the famous encryption scheme
+which was developed by and named after another group of Turing award winners.
+(TAing for famous computer scientists is my main claim to fame, as I also did so for the R of RSA, Rivest.)
+Half a decade *later*, Micali and Goldwasser formally defined security for such schemes.
 
-Here, we'll give a very basic presentation
+Today, we'll need only a very basic presentation.
 
 ### Encryption
 
@@ -50,34 +48,52 @@ Say we start with a message, call it $$m$$.  Like so:
 
 ![A message](/assets/images/homomorphic/m.png)
 
-**Encrypting** a message is basically just putting a lock around the message so others can't read it.
+An encrypted message is just a message that is locked up so other's cant read it.
+The message is not physically locked up, but is scrambled to look like complete gibberish.
 I'll denote an encrypted message by drawing a circle around the original message:
 
 ![An encrypted message](/assets/images/homomorphic/em.png)
 
-So the "lock" is actually a function you apply: an encryption function.  
+**Encrypting** a message is the process of putting a lock around the message.
+The "lock" is actually a function you apply, called an encryption function.  
+
+![Encrypt!](/assets/images/homomorphic/encrypt.png)
+
 We'll denote the encrpyted version of the message $$ m $$ by $$ E(m) $$.
-The message is not physically locked up, but is scrambled to look like complete gibberish.
+The function $$ E $$ is depicted by the lock.  The arrow depicts function application.
 
 ### Decryption
 
 Now, a lock is not a lock without a key!
-With a certain secret key, call it $$ k $$, this lock can be removed, and the message can be recovered!
+With a certain secret key, this lock can be removed, and the message can be recovered!
 
 ![Decryption](/assets/images/homomorphic/decrypt.png)
 
 Decryption is also a function, call it $$ D $$.
-It has the crucial property that $$ D(E(m), k) = m $$.
+But in addition to a message, it also requires a secret key, $$ k $$.
+
+![Our functions](/assets/images/homomorphic/functions.png)
+
+Crucially, decryption has the property that $$ D(E(m), k) = m $$.
+The picture makes it more obvious:
+
+![Decryption](/assets/images/homomorphic/encryptdecrypt.png)
 
 Equally important is that without this secret key $$ k $$, the message becomes very hard to recover.  
+The function $$ D $$ is publicly known, but if you feed it the wrong key, you get gibberish back out.
+
 As far as we can tell, you need to use brute force, which takes an impractically long time.
-(In practice, security breaches are rarely due to message recovery being mathematically easy)
 
 ![Security breach](/assets/images/homomorphic/insecure.png)
 
-### Legacy
+Note that *encryption does not require the secret key*.
+We call this "asymmetric" encryption.
+This asymmetry is very useful in the real world.
+For example, it lets me send a secret message to someone I don't know, without knowing their key.
 
-Encryption is fundamental to all security and privacy on the internet.
+### Summary
+
+Encryption and decryption are fundamental to all security and privacy on the internet.
 In fact, RSA remains extremely practical and commonplace -
 if the security of the scheme were compromised, it would have a major impact on the world.
 Until then, it puts the S in HTTPS!
@@ -97,10 +113,6 @@ than the open-source algorithm Alice was thinking to run.
 But Alice doesn't want to give away her genome to someone she doesn't know.
 What does she do?
 
-At the very least, she could encrypt her data before sending it off.
-At least that way, the mailman can't steal the DNA.
-But still, Bob seemingly needs to have a decryption key in order to do anything with it.
-
 To solve this problem, we need something magical.
 
 ### Definition
@@ -110,17 +122,36 @@ Unfortunately, $$ f $$ can only be computed by Bob, perhaps because it is comput
 However, Alice wishes for Bob not to see $$ m $$.
 So how can she get from $$ m $$ to $$ f(m) $$?
 
-![This doesn't work](/assets/images/homomorphic/homomorphictry1.png)
+![This doesn't work](/assets/images/homomorphic/homomorphictry.png)
 
 Homomorphic encryption essentially lets you take encrypted inputs, and apply some function to get an encrypted output.
 
-![Homomorphic function application](/assets/images/homomorphic/homomorphicapply1.png)
-
-More precisely, homomorphic encryption is an encryption scheme, with an additional, amazing property.  
+More precisely, homomorphic encryption is an encryption scheme, with an additional property.  
 For any function $$ f $$, you can easily transform it into a "homomorphic" version of the function, call it $$ f^* $$.  
 This transformation has the "homomorphic" property that $$ f^*(E(m)) = E(f(m)) $$, for any message $$ m $$.
 
-With such a scheme, here's how Alice would get $$ f(m) $$:  
+![Homomorphic function application](/assets/images/homomorphic/homomorphicapply.png)
+
+Of course, if you have a decryption key $$ k $$, this transformation from $$ f $$ to $$ f^* $$ is easy.
+Simply decrypt, apply $$ f $$, and re-encrypt!
+Formally, let $$ f^*(x) = E(f(D(x, k))) $$.
+Then, if $$ x = E(m) $$, we have $$ f^*(E(m)) = E(f(D(E(m), k))) = E(f(m)) $$, as desired.
+
+![Easy](/assets/images/homomorphic/fapply.png)
+
+But in homomorphic encryption, the security of the original scheme is not compromised.
+So Bob is not allowed to use the key to accomplish this.
+After all, he is recovering $$ m $$ as an intermediate step, and could peek at it then.
+
+In homomorphic encryption, he must compute a function on inputs he can't even see, r
+esulting in an output he can't see either!
+And this can be done for *any* function $$ f $$.
+The homomorphic property really is magical.
+
+Now, assuming Bob has this way of transforming a function $$ f $$  into a homomorphic one $$ f^* $$,
+here's how Alice would get $$ f(m) $$:  
+
+![Magic](/assets/images/homomorphic/alicebob.png)
 
 - Alice generates a secret, $$ k $$, and takes her data $$ m $$, and encrypt it, to get $$ E(m) $$.  
 - Alice hands $$ E(m) $$ to Bob, and tells him a function $$ f $$ she'd like to compute on it.
@@ -129,22 +160,21 @@ With such a scheme, here's how Alice would get $$ f(m) $$:  
 - Bob uses his super computer to apply $$ f^* $$ to $$ E(m) $$, producing $$ f^*(E(m)) = E(f(m)) $$.  
 - Bob hands $$ E(f(m)) $$ to Alice, who then decrypts with her key: $$ D(E(f(m)), k) = f(m) $$!
 
-Of course, if you have a decryption key $$ k $$, this transformation from $$ f $$ to $$ f^* $$ is easy.
-Simply let $$ f^*(x) = E(f(D(x, k))) $$.  That is, decrypt, apply $$ f $$, and re-encrypt!
-Then, if $$ x = E(m) $$, we have $$ f^*(E(m)) = E(f(D(E(m), k))) = E(f(m)) $$, as desired.
-
-![Easy](/assets/images/homomorphic/fapply.png)
-
-But in homomorphic encryption, the security of the original scheme is not compromised.
-So Bob is not allowed to be able to recover $$ m $$ as an intermediate step.
-He must compute a function on inputs he can't even see, resulting in an output he can't see either!
-To reiterate, this somehow happens, without ever opening either lock:
-
-![Magic](/assets/images/homomorphic/homomorphicapply1.png)
-
 In fact, if homomorphic encryption is possible, then Alice can even make the function itself secret.
 That is, she wants Bob to neither know $$ f $$ nor $$ m $$, and yet to compute $$ f(m) $$ for her!
 Can you see how?  (Hint: it involves something called a Universal Turing Machine)
+
+### Homomorphic?
+
+Now that you know what encryption is, and what homomorphic encryption is,
+you may be wondering what "homomorphic" means.
+In math, a homomorphism is a structure-preserving map.
+So "homomorphic" is a fancy way to say that it completes this diagram:
+
+![Homomorphism](/assets/images/homomorphic/homomorphic.png)
+
+The homomorphic property lets us take the function $$ f $$ into a version of it that operates
+in an encrypted version of the world.
 
 ### History
 
@@ -157,19 +187,22 @@ was a huge question mark for 30 years.
 
 *... drumroll*
 
-### A candidate scheme
+## A homomorphic encryption scheme
 
 Finally in 2009, Craig Gentry produced a candidate homomorphic encryption scheme.  
 
-To do so, he first constructed a **"somewhat" homomorphic encryption scheme**.
+### Somewhat homomorphic encryption
 
-#### Somewhat homomorphic encryption
+Coming up with a homomorphic encryption scheme is difficult, but
+it turns out coming up with a **somewhat** homomorphic scheme is not so hard.
 
-In a somewhat homomorphic scheme, each time you apply a homomorphic function, the shape of the lock gets a little bit warped.  
+In a somewhat homomorphic scheme, each time you apply the homomorphic version of a function,
+the quality of the encryption gets a bit worse.
+
+Imagine you could change the contents inside the lock, but the shape of the lock gets a little bit warped.  
 The more complicated the function, the more warped the lock would get.  
-If the lock was only warped a little bit, then the key could still open it.  
-But if it got warped too much, the key would stop working.  
-Unfortunately, this meant you couldn't do very much computation before the output became impossible to read, even for someone with the key.
+For a while, the key might still be able to open the lock, but eventually,
+when the lock is too damaged, the key would stop working.  
 
 To illustrate, I'll use green circles to denote locks that can still be unlocked, and red circles to denote locks that are hopeless.  
 So a dark green circle is a perfectly fine encryption:
@@ -180,58 +213,102 @@ But a red one makes it so even a key can't recover a message:
 
 ![Bad decryption](/assets/images/homomorphic/reddecrypt.png)
 
-Now suppose we wanted to go from $$ m $$ to $$ m + 6 $$, by repeatedly adding one.  What might happen is this:
+Now suppose we wanted to go from $$ m $$ to $$ m + 6 $$, by repeatedly adding one.  
+So, we let $$ f(x) = x + 1 $$, use the homomorphic property to get $$ f^* $$, and apply repeatedly.
+What happens is this:
 
 ![Decryption worsening](/assets/images/homomorphic/worsen.png)
 
-It turns out coming up with a somewhat homomorphic scheme is not so hard.
-But the scheme is not very useful, if you can't even add 6 to a number homomorphically!
+Recall that the homomorphic property is that $$ f^*(E(m)) = E(f(m)) $$.
+Let $$ E_x(m) $$ represent an encryption with $$ x $$ amount of warpedness.
+So $$ E_0(m) $$ would represent a fresh encryption and $$ E_6(m) $$ might represent a irrecoverable encryption.
+The somewhat homomorphic property then says $$ f^*(E_x(m)) = E_{x+y}(f(m)) $$,
+where the value of $$ y $$ depends on how complicated $$ f $$ is.
 
+So I can homomorphically add 2 or 3, but not 6!
+This "somewhat homomorphic" property seems not so useful.
+But this was Gentry's first step in obtaining a fully homomorphic scheme.
 So where do we go from here?  
 
-#### Bootstrapping
+### Bootstrapping
 
-Here's where an amazingly idea called **bootstrapping** comes in.
-What we'd like is a way to get from a bad encryption to a good one.
+Suppose we had a way to "refresh" a bad encryption back into a good encryption.
+
+![Refresh](/assets/images/homomorphic/refresh.png)
+
+Then we could add 6 by simply adding 3, refreshing, then adding 3 again.
+More generally, we could decompose complicated functions
+into many simple functions, and refresh the encryptions
+after applying each simple function.
+
+Here's where an amazing idea called **bootstrapping** comes in.
 First, the picture:
 
 ![Bootstrapping!](/assets/images/homomorphic/bootstrap.png)
 
 What the hell is going on here?
 
-1. We start with an encryption that is almost red, i.e. almost unusable.
-1. We encrypt this encryption, freshly!  That is, we put a very new, shiny lock around it.
-1. We *homomorphically* apply the decryption function!  
-   Remember, this means that function is magically applied to whatever is on the inside of the lock.
-   In this case, what's inside is an encryption, and the function is decryption.  So the result is that our original message sits inside the lock!
+Basically, we're putting a fresh lock on the outside, and then unlocking the *inner* lock.
+Unfortunately, when we do so, the outer lock will get a bit warped.  
+But if it's better than the original lock, then we've made progress!  
 
-Unfortunately, when we apply the decryption function, our shiny new lock will get worse.  
-But if it doesn't get too bad, and is still better than the original lock, then we've made progress!  
-And we can do this over and over, whenever our lock is starting to get bad, in order to continue our computation.
-And that's it.  This bootstrapping process turns a somewhat homomorphic encryption scheme into a "fully" homomorphic one.
+But wait a minute, didn't we cheat by using the key?
+Well, not quite.  We used the homomorphic version of the encryption function, which looks like this:
 
-Take a moment to understand - it's really quite beautiful!
+![Homomorphic decrypt](/assets/images/homomorphic/homomorphicdecrypt.png)
 
-A few things of note:
+So Bob only needs an *encrypted* version of the key.
 
-- Remember, the person doing all this is the person we don't trust.  
-  But as an input to the decryption function, they need the secret key!  
-  Luckily, their decryption function is homomorphic, so we can just give them *an encryption of the secret key*.  
-  It's a necessary assumption that this is safe (luckily, it appears to be, for all we know).
-- A lot of technical details went into making the decryption function simple enough that it didn't make the new lock worse than the old one.
+![Encrypted key](/assets/images/homomorphic/encryptedkey.png)
 
-## Conclusion
+Is this safe?
+Cryptographers still believe this is okay, and that Bob can't recover the key or message.
+It's a bit like breaking into a house, where you know there's a copy of the key inside the house.
+The fact that there's a key inside doesn't really help you, when you're on the outside to begin with.
+
+To break the bootstrapping process down in more detail:
+
+1. We start with an encryption that is getting close to unusable, $$ E_4(m) $$.
+1. We encrypt this encryption, freshly!  
+   So now, it is weirdly encrypted twice, as $$ E_0(E_4(m)) $$.
+   Bob can do this due to the asymmetric nature of encryption.
+1. We now *homomorphically* apply the decryption function!  
+   Remember, this means a function is magically applied to the inner contents.
+   In this case, what's inside is an encryption, and the function is decryption.  
+   So the result is that our original message sits inside just one lock!
+   Mathematically:
+   $$ D^*(E_0(E_4(m)), k^*) = E_2(D(E_4(m), k)) = E_2(m) $$
+
+The picture, again:
+
+![Bootstrapping!](/assets/images/homomorphic/bootstrap.png)
+
+So this bootstrapping process turns a somewhat homomorphic encryption scheme into a "fully" homomorphic one,
+simply by doing this refreshing process repeatedly during our computation.
+And that's it.  Take a moment to understand - it's really quite beautiful!
+
+### Aftermath
+
+Plenty of technical work went into making the decryption function simple enough
+that the resulting lock wasn't worse off than the beginning.
+But after Gentry's original paper, the somewhat homomorphic schemes and decryption functions
+have actually been substantially simplified.
+The biggest key idea that opened the research floodgates was the bootstrapping.
 
 So this amazing trick makes it so that we can now have someone blindly apply arbitrary functions to encrypted data.  
-Unfortunately, because the bootstrapping procedure must be ran often, this scheme is too slow to be practically useful.  
+Unfortunately, this same trick makes the schemes impractically slow.
+The bootstrapping procedure is expensive and must be ran often,
+and nobody has figured out how to get rid of it.
 But research in this area has accelerating, and cryptographers are now working on bringing this dream to reality.
+
+## Conclusion
 
 Imagine a world where
 
 - cloud email services like Gmail could search through your mail for you without being able reading it,
   so you would never have to worry about the NSA pressuring Google into giving away sensitive information.
-- where voters could vote electronically without worrying about someone knowing who they voted for
+- voters could vote electronically without worrying about privacy
   (this is a special case of multi-party secure computation, which is possible with homomorphic encryption)
-- where you could give away truly obfuscated source code, but still let others run your algorithm
+- you could give away truly obfuscated source code, but still let others run your algorithm
 
 Can you imagine ways in which the world might be better off with homomorphic encryption?
