@@ -29,6 +29,9 @@ gop = "!f(){ $(git editor) $(git grep --name-only \"$@\"); }; f"
 # "show and open" commit
 shop = "!f() { $(git editor) $(git show --pretty=\"format:\" --name-only $1); }; f"
 
+# open on github
+hop = "!f() { hub browse -- blob/master/$(git find $@ | head -n 1); }; f"
+
 editor = config --get core.editor
 ```
 
