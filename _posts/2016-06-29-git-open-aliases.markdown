@@ -32,6 +32,25 @@ shop = "!f() { $(git editor) $(git show --pretty=\"format:\" --name-only $1); };
 # open on github
 hop = "!f() { hub browse -- blob/master/$(git find $@ | head -n 1); }; f"
 
+# fuzzy aliases require fzf (added 2016/8/12)
+
+# fuzzy open by name
+zop = "!f() { \
+  local file=$(git ls-files $(git rev-parse --show-toplevel) | fzf -m); \
+  if [[ -z $file ]]; then return 1; fi; \
+  $(git editor) $file; \
+}; f"
+
+# fuzzy grep (does only one file)
+zgop = "!f() { \
+  local raw_selection=$(git grep -n '.*' | fzf); \
+  if [[ -z $raw_selection ]]; then return 1; fi; \
+  local selection=${raw_selection%:*}; \
+  local file=${selection%:*}; \
+  local line=${selection##*:}; \
+  $(git editor) +\"$line\" \"$file\"; \
+}; f"
+
 editor = config --get core.editor
 ```
 
