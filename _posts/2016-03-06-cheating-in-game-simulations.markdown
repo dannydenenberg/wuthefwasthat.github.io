@@ -3,6 +3,7 @@ layout: post
 title:  "Cheating in game simulations"
 date:   2016-03-06 10:18:32 -0700
 categories: programming
+comments: true
 ---
 
 # Intro

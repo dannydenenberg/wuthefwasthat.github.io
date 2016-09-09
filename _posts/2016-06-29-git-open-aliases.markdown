@@ -3,6 +3,7 @@ layout: post
 title:  "Git 'open' aliases"
 date:   2016-06-29 10:18:32 -0700
 categories: programming git
+comments: true
 ---
 
 Recently, I made some aliases for opening files within a git repo.
@@ -29,19 +30,19 @@ gop = "!f(){ $(git editor) $(git grep --name-only \"$@\"); }; f"
 # "show and open" commit
 shop = "!f() { $(git editor) $(git show --pretty=\"format:\" --name-only $1); }; f"
 
-# open on github
+# open on github (requires hub)
 hop = "!f() { hub browse -- blob/master/$(git find $@ | head -n 1); }; f"
 
 # fuzzy aliases require fzf (added 2016/8/12)
 
-# fuzzy open by name
+# fuzzy open by name, takes no argument
 zop = "!f() { \
   local file=$(git ls-files $(git rev-parse --show-toplevel) | fzf -m); \
   if [[ -z $file ]]; then return 1; fi; \
   $(git editor) $file; \
 }; f"
 
-# fuzzy grep (does only one file)
+# fuzzy grep (does only one file), takes no argument
 zgop = "!f() { \
   local raw_selection=$(git grep -n '.*' | fzf); \
   if [[ -z $raw_selection ]]; then return 1; fi; \
