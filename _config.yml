@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Glob of thoughts
+title: Jeff Wu
 email: wuthefwasthat@gmail.com
 description: >
-  Personal blog of Jeff Wu
+  Personal website of Jeff Wu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wuthefwasthat.github.io/" # the base hostname & protocol for your site
 twitter_username:

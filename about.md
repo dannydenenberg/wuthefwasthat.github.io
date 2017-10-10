@@ -4,10 +4,14 @@ title: About
 permalink: /about/
 ---
 
-I currently work as a software engineer at Google, working on deep learning for user personalization.
-Before that, I was one of the first engineers at a startup called Terminal.com, which was acquired by Udacity.
-Before that, I studied math and CS at MIT, where I did my undergrad and a Master's working on probabilistic programming languages.
-And before that, I was a random kid in San Diego.
+A brief history of me:
+- I currently work as a software engineer at Google, working on deep learning for user personalization.
+- Before that, I was one of the first engineers at a startup called Terminal.com that provided Linux instances in the browser, which was acquired by Udacity.
+- Before that, I did my undergrad in math and CS at MIT, and then stayed for a Master's working on probabilistic programming languages.
+- And before that, I was a random kid in San Diego.
 
-I'm generally concerned about existential risk.  I enjoy thinking about many research topics, and about technology.
-I also enjoy playing many games, such as Super Smash Brothers Melee, DDR, Dominion, Hanabi, and lots of puzzle games.
+In my spare time, I like to:
+- Work on [side projects](/projects)
+- Think about random topics (especially computer science and technology).  You can get a sample from [my blog](/blog)
+- Spend time with my girlfriend and other friends
+- Play games, read, listen to music, etc.  [Here is a sample of things I've found most entertaining](/favorites)
