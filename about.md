@@ -14,7 +14,7 @@ A brief history of me:
 - And before that, I was a random kid in San Diego.
 
 In my spare time, I like to:
-- Work on [side projects](/projects)
-- Spend time with my girlfriend and other friends
-- Think about random topics (especially computer science and technology).  You can get a sample from [my blog](/blog)
-- Play games, read, listen to music, etc.  [Here is a sample of things I've found most entertaining](/favorites)
+- Work on [side projects](/projects).
+- Spend time with my girlfriend and other friends.
+- Think about random topics (especially computer science and technology).  You can get a sample from [my blog](/blog).
+- Play games, read, listen to music, etc.  [Here is a sample of things I've found most entertaining](/favorites).
