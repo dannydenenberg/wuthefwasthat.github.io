@@ -8,10 +8,14 @@ comments: true
 
 Recently, I made some aliases for opening files within a git repo.
 
+They're pretty simple, but they've affected my workflow a lot - I nearly never open files *without* using a git alias anymore.
+
 After explaining to a coworker what the git commands "mop" and "shop" meant, they said I should share these with others.
 Though I'm sure someone else has thought of this, a quick Google search didn't turn up anything.  So here they are!
 
 ```
+# These go in your .gitconfig under the [alias] heading
+
 # open file by name
 op = "!f() { $(git editor) $(git ls-files | grep -i \"$@\"); }; f"
 
@@ -54,8 +58,6 @@ zgop = "!f() { \
 
 editor = config --get core.editor
 ```
-
-They're pretty simple, but they've affected my workflow a lot - I nearly never open files *without* using a git alias anymore.
 
 NOTE: These aliases only work with editors that take separate filenames as arguments and opens all of them.
 I think vim and emacs both work though, so that should cover many users.

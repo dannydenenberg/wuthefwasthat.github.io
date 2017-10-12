@@ -1,8 +1,11 @@
 ---
 layout: page
+header: true
 title: About
 permalink: /about/
 ---
+
+#### Hi! Welcome to the personal homepage of Jeff Wu.
 
 A brief history of me:
 - I currently work as a software engineer at Google, working on deep learning for user personalization.
@@ -12,6 +15,6 @@ A brief history of me:
 
 In my spare time, I like to:
 - Work on [side projects](/projects)
-- Think about random topics (especially computer science and technology).  You can get a sample from [my blog](/blog)
 - Spend time with my girlfriend and other friends
+- Think about random topics (especially computer science and technology).  You can get a sample from [my blog](/blog)
 - Play games, read, listen to music, etc.  [Here is a sample of things I've found most entertaining](/favorites)
