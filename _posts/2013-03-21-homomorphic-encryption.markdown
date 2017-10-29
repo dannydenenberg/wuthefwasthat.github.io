@@ -6,12 +6,13 @@ categories: computer science
 comments: true
 ---
 
-<style>
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-</style>
+# Contents
+{:.no_toc}
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Honoring Goldwasser and Micali
 
 Shafi Goldwasser and Silvio Micali won the Turing Award recently, for their foundational work in cryptography.  
 I had the pleasure of working with Silvio (as his TA and as his student) while at MIT,

@@ -99,7 +99,7 @@ As a bonus, mutating GameStateView became impossible, too.
 
 Note: A Haskell proramming would actually probably not write it like this, but you get the point
 
-#### Solution 2: Rust
+### Solution 2: Rust
 
 Until pretty recently, using a functional programming language might have been the only option. But along came Rust:
 
