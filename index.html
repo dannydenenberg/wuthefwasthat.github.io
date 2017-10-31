@@ -51,7 +51,6 @@ Hi!  Welcome to the personal website of Jeff Wu.
   var secondaryPics = [
     // "jeffwu/style_daio_metal.jpg",
     // "jeffwu/style_daio_stars.jpg",
-    // "jeffwu/style_daio_firedream.jpg",
     "jeffwu/style_starry_night.jpg",
     "jeffwu/style_daio_gold.jpg",
     "jeffwu/style_algo_hot.png",
@@ -62,28 +61,28 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_algo_green.png",
     "jeffwu/style_daio_cave.jpg",
     "jeffwu/style_wave_kanagawa.png",
-    "jeffwu/style_daio_metal.jpg",
+    "jeffwu/style_daio_mosaic.jpg",
     "jeffwu/style_la_muse.png",
     "jeffwu/style_daio_strands.jpg",
+    "jeffwu/style_daio_circuit.jpg",
     "jeffwu/style_algo_purple.png",
     "jeffwu/style_scream.png",
     "jeffwu/style_daio_matrix.jpg",
     "jeffwu/style_daio_leaves.jpg",
     "jeffwu/style_daio_draw.jpg",
-    "jeffwu/style_daio_sketch.jpg",
     "jeffwu/style_daio_painting2.jpg",
     "jeffwu/style_daio_rainbow.jpg",
+    "jeffwu/style_daio_sketch.jpg",
     "jeffwu/style_daio_abstract2.jpg",
     "jeffwu/style_daio_vangogh.jpg",
     "jeffwu/style_daio_abstract3.jpg",
     "jeffwu/style_daio_sketch2.jpg",
-    "jeffwu/style_daio_mosaic.jpg",
-    "jeffwu/style_daio_circuit.jpg",
+    "jeffwu/style_daio_sketch3.jpg",
   ];
-  // var secondaryIndex = 0;
+  var secondaryIndex = 0;
   function secondaryFadeIn() {
     setSecondaryImage(secondaryPics[secondaryIndex]);
-    // secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
+    secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
     // secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
     secondaryImage.style.opacity = 1;
     primaryImage.style.opacity = 0;
