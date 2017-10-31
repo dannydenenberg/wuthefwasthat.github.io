@@ -5,8 +5,6 @@ title: About
 permalink: /about/
 ---
 
-#### Hi! Welcome to the personal homepage of Jeff Wu.
-
 A brief history of me:
 - I currently work as a software engineer at Google, working on deep learning for user personalization.
 - Before that, I was one of the first engineers at a startup called Terminal.com that provided Linux instances in the browser, which was acquired by Udacity.

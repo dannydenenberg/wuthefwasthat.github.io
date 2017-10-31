@@ -3,5 +3,71 @@ layout: default
 ---
 
 
+Hi!  Welcome to the personal website of Jeff Wu.
 
-<meta http-equiv="Refresh" content="0; url=/about" />
+<br/>
+<br/>
+
+<div>
+  <div id="primary-jeffwu" class="jeffwu-image"></div>
+  <div id="secondary-jeffwu" class="jeffwu-image"></div>
+</div>
+
+<style>
+  .jeffwu-image {
+     position: absolute;
+     height: 500px;
+     width: 100%;
+     background-size: cover;
+
+     -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+     transition: opacity 1s ease-in-out;
+  }
+  #primary-jeffwu {
+     background-image: url('assets/images/jeffwu/main.jpg');
+     opacity: 1
+  }
+  #secondary-jeffwu {
+     background-image: url('assets/images/jeffwu/main.jpg');
+     opacity: 0
+  }
+</style>
+
+<script>
+
+  var primaryImage = document.getElementById('primary-jeffwu');
+  var secondaryImage = document.getElementById('secondary-jeffwu');
+
+  function setSecondaryImage(path) {
+    var image = new Image();
+    image.src = 'assets/images/' + path;
+    image.onload = function () {
+      secondaryImage.style.backgroundImage = 'url(' + image.src + ')';
+    };
+  }
+
+  var secondaryIndex = 0;
+  secondaryImage.addEventListener("mouseover", function() {
+    var pics = [
+      // "jeffwu/dmesh.png",
+      // "jeffwu/style_girl_in_rain.png",
+      "jeffwu/style_wave_kanagawa.png",
+      "jeffwu/style_scream.png",
+      "jeffwu/style_la_muse.png",
+      "jeffwu/style_udnie.png",
+      // "jeffwu/style_shipwreck_minotaur.png",
+    ];
+    setSecondaryImage(pics[secondaryIndex]);
+    secondaryIndex = (secondaryIndex + 1) % pics.length;
+    // secondaryIndex = Math.floor(Math.random() * pics.length);
+    secondaryImage.style.opacity = 1;
+    primaryImage.style.opacity = 0;
+  });
+  secondaryImage.addEventListener("mouseout", function() {
+    secondaryImage.style.opacity = 0;
+    primaryImage.style.opacity = 1;
+  });
+</script>
+
+<!-- meta http-equiv="Refresh" content="0; url=/about" --/>
