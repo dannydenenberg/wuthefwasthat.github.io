@@ -51,7 +51,7 @@ Hi!  Welcome to the personal website of Jeff Wu.
   }
 
   var secondaryIndex = 0;
-  secondaryImage.addEventListener("mouseover", function() {
+  function secondaryFadeIn() {
     var pics = [
       "jeffwu/style_wave_kanagawa.png",
       "jeffwu/style_scream.png",
@@ -66,11 +66,16 @@ Hi!  Welcome to the personal website of Jeff Wu.
     // secondaryIndex = Math.floor(Math.random() * pics.length);
     secondaryImage.style.opacity = 1;
     primaryImage.style.opacity = 0;
-  });
-  secondaryImage.addEventListener("mouseout", function() {
+  }
+  function secondaryFadeOut() {
     secondaryImage.style.opacity = 0;
     primaryImage.style.opacity = 1;
-  });
+  }
+
+  secondaryImage.addEventListener("mouseover", secondaryFadeIn);
+  secondaryImage.addEventListener("mouseout", secondaryFadeOut);
+  secondaryImage.addEventListener("touchstart", secondaryFadeIn);
+  secondaryImage.addEventListener("touchend", secondaryFadeOut);
 </script>
 
 <!-- meta http-equiv="Refresh" content="0; url=/about" --/>
