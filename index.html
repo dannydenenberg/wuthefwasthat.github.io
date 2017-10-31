@@ -8,9 +8,9 @@ Hi!  Welcome to the personal website of Jeff Wu.
 <br/>
 <br/>
 
-<div id="image-container">
-  <div id="primary-jeffwu" class="jeffwu-image"></div>
-  <div id="secondary-jeffwu" class="jeffwu-image"></div>
+<div id="image-container" class="noselect">
+  <img id="primary-jeffwu" class="jeffwu-image" src="assets/images/jeffwu/main.jpg"></img>
+  <img id="secondary-jeffwu" class="jeffwu-image" src="assets/images/jeffwu/main.jpg"></img>
 </div>
 
 <style>
@@ -19,20 +19,18 @@ Hi!  Welcome to the personal website of Jeff Wu.
   }
   .jeffwu-image {
      position: absolute;
-     height: 500px;
+     z-index: -1;
+     height: auto;
      width: 100%;
-     background-size: cover;
 
      -webkit-transition: opacity 1s ease-in-out;
      -moz-transition: opacity 1s ease-in-out;
      transition: opacity 1s ease-in-out;
   }
   #primary-jeffwu {
-     background-image: url('assets/images/jeffwu/main.jpg');
      opacity: 1
   }
   #secondary-jeffwu {
-     background-image: url('assets/images/jeffwu/main.jpg');
      opacity: 0
   }
 </style>
@@ -46,12 +44,13 @@ Hi!  Welcome to the personal website of Jeff Wu.
     var image = new Image();
     image.src = 'assets/images/' + path;
     image.onload = function () {
-      secondaryImage.style.backgroundImage = 'url(' + image.src + ')';
+      secondaryImage.src = image.src;
     };
   }
 
   var secondaryIndex = 0;
   function secondaryFadeIn() {
+  console.log('fading in?');
     var pics = [
       "jeffwu/style_wave_kanagawa.png",
       "jeffwu/style_scream.png",
