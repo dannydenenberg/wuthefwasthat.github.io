@@ -8,12 +8,15 @@ Hi!  Welcome to the personal website of Jeff Wu.
 <br/>
 <br/>
 
-<div>
+<div id="image-container">
   <div id="primary-jeffwu" class="jeffwu-image"></div>
   <div id="secondary-jeffwu" class="jeffwu-image"></div>
 </div>
 
 <style>
+  #image-container {
+    position: relative;
+  }
   .jeffwu-image {
      position: absolute;
      height: 500px;
@@ -50,12 +53,12 @@ Hi!  Welcome to the personal website of Jeff Wu.
   var secondaryIndex = 0;
   secondaryImage.addEventListener("mouseover", function() {
     var pics = [
-      // "jeffwu/dmesh.png",
-      // "jeffwu/style_girl_in_rain.png",
       "jeffwu/style_wave_kanagawa.png",
       "jeffwu/style_scream.png",
-      "jeffwu/style_la_muse.png",
       "jeffwu/style_udnie.png",
+      "jeffwu/style_la_muse.png",
+      // "jeffwu/dmesh.png",
+      // "jeffwu/style_girl_in_rain.png",
       // "jeffwu/style_shipwreck_minotaur.png",
     ];
     setSecondaryImage(pics[secondaryIndex]);
