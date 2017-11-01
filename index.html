@@ -40,36 +40,34 @@ Hi!  Welcome to the personal website of Jeff Wu.
   var primaryImage = document.getElementById('primary-jeffwu');
   var secondaryImage = document.getElementById('secondary-jeffwu');
 
-  function setSecondaryImage(path) {
-    var image = new Image();
-    image.src = 'assets/images/' + path;
-    image.onload = function () {
-      secondaryImage.src = image.src;
+  function setImage(image, path) {
+    var image_loader = new Image();
+    image_loader.src = 'assets/images/' + path;
+    image_loader.onload = function () {
+      image.src = image_loader.src;
     };
   }
 
   var secondaryPics = [
-    // "jeffwu/style_daio_metal.jpg",
-    // "jeffwu/style_daio_stars.jpg",
-    "jeffwu/style_starry_night.jpg",
-    "jeffwu/style_daio_gold.jpg",
+    "jeffwu/style_udnie.png",
+    "jeffwu/style_scream.png",
+    "jeffwu/style_wave_kanagawa.png",
+    "jeffwu/style_la_muse.png",
+    "jeffwu/style_algo_purple.png",
+    "jeffwu/style_algo_green.png",
     "jeffwu/style_algo_hot.png",
+    "jeffwu/style_daio_metal.jpg",
+    "jeffwu/style_daio_starry_night.jpg",
+    // "jeffwu/style_daio_starry_night2.jpg",
+    "jeffwu/style_daio_gold.jpg",
     "jeffwu/style_daio_painting.jpg",
     "jeffwu/style_daio_abstract.jpg",
-    "jeffwu/style_udnie.png",
     "jeffwu/style_daio_brick.jpg",
-    "jeffwu/style_algo_green.png",
     "jeffwu/style_daio_cave.jpg",
-    "jeffwu/style_wave_kanagawa.png",
     "jeffwu/style_daio_mosaic.jpg",
-    "jeffwu/style_la_muse.png",
     "jeffwu/style_daio_strands.jpg",
-    "jeffwu/style_daio_circuit.jpg",
-    "jeffwu/style_algo_purple.png",
-    "jeffwu/style_scream.png",
-    "jeffwu/style_daio_matrix.jpg",
     "jeffwu/style_daio_leaves.jpg",
-    "jeffwu/style_daio_draw.jpg",
+    "jeffwu/style_daio_gray.jpg",
     "jeffwu/style_daio_painting2.jpg",
     "jeffwu/style_daio_rainbow.jpg",
     "jeffwu/style_daio_sketch.jpg",
@@ -78,16 +76,53 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_daio_abstract3.jpg",
     "jeffwu/style_daio_sketch2.jpg",
     "jeffwu/style_daio_sketch3.jpg",
+    "jeffwu/style_daio_trinkets.jpg",
+    "jeffwu/style_daio_points.jpg",
+    "jeffwu/style_daio_fishlike.jpg",
+    "jeffwu/style_daio_abstract4.jpg",
+    "jeffwu/style_daio_abstract5.jpg",
+    "jeffwu/style_daio_abstract6.jpg",
+    "jeffwu/style_daio_painting3.jpg",
+    "jeffwu/style_daio_ernestcelestine.jpg",
+    // "jeffwu/style_daio_child.jpg",
+    // "jeffwu/style_daio_flowers.jpg",
+    // "jeffwu/style_daio_wisps.jpg",
+  ];
+
+  var ending1 = [
+    "jeffwu/style_daio_circuit.jpg",
+    "jeffwu/style_daio_matrix.jpg",
+  ];
+  var ending2 = [
+    "jeffwu/style_daio_paperclipscolor.jpg",
+    "jeffwu/style_daio_paperclipscolor2.jpg",
+  ];
+  var ending3 = [
+    "jeffwu/style_daio_stars.jpg",
+    "jeffwu/style_daio_stars2.jpg",
   ];
   var secondaryIndex = 0;
   function secondaryFadeIn() {
-    setSecondaryImage(secondaryPics[secondaryIndex]);
-    secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
-    // secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
+    if (secondaryIndex >= secondaryPics.length) {
+      if ((secondaryIndex - secondaryPics.length) % 2 == 0) {
+        setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor.jpg');
+      } else {
+        setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor2.jpg');
+      }
+    } else {
+      setImage(secondaryImage, secondaryPics[secondaryIndex]);
+      // secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
+      // secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
+    }
     secondaryImage.style.opacity = 1;
+    secondaryImage.title = 'Testing';
     primaryImage.style.opacity = 0;
   }
   function secondaryFadeOut() {
+    if (secondaryIndex == secondaryPics.length) {
+      setImage(primaryImage, 'jeffwu/style_daio_paperclips.jpg');
+    }
+    secondaryIndex = secondaryIndex + 1;
     secondaryImage.style.opacity = 0;
     primaryImage.style.opacity = 1;
   }
