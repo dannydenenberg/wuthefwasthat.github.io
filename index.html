@@ -65,9 +65,7 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_daio_brick.jpg",
     "jeffwu/style_daio_cave.jpg",
     "jeffwu/style_daio_mosaic.jpg",
-    "jeffwu/style_daio_strands.jpg",
     "jeffwu/style_daio_leaves.jpg",
-    "jeffwu/style_daio_gray.jpg",
     "jeffwu/style_daio_painting2.jpg",
     "jeffwu/style_daio_rainbow.jpg",
     "jeffwu/style_daio_sketch.jpg",
@@ -76,7 +74,6 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_daio_abstract3.jpg",
     "jeffwu/style_daio_sketch2.jpg",
     "jeffwu/style_daio_sketch3.jpg",
-    "jeffwu/style_daio_trinkets.jpg",
     "jeffwu/style_daio_points.jpg",
     "jeffwu/style_daio_fishlike.jpg",
     "jeffwu/style_daio_abstract4.jpg",
@@ -84,22 +81,59 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_daio_abstract6.jpg",
     "jeffwu/style_daio_painting3.jpg",
     "jeffwu/style_daio_ernestcelestine.jpg",
+    "jeffwu/style_daio_news.jpg",
+    "jeffwu/style_daio_napkin.jpg",
+    "jeffwu/style_daio_triangle.jpg",
+    "jeffwu/style_daio_blue.jpg",
+    "jeffwu/style_daio_leaves2.jpg",
+    "jeffwu/style_daio_map.jpg",
+    "jeffwu/style_daio_sketch4.jpg",
+    "jeffwu/style_daio_painting4.jpg",
+    "jeffwu/style_daio_hexagons.jpg",
+    "jeffwu/style_daio_mosaic4.jpg",
+    "jeffwu/style_daio_mosaic5.jpg",
+    "jeffwu/style_daio_abstract7.jpg",
+    "jeffwu/style_daio_colorful.jpg",
+    "jeffwu/style_daio_colorful2.jpg",
+    "jeffwu/style_daio_abstract8.jpg",
+    "jeffwu/style_daio_abstract9.jpg",
+    "jeffwu/style_daio_purple.jpg",
+    "jeffwu/style_daio_notebook.jpg",
+    "jeffwu/style_daio_flowers2.jpg",
+    "jeffwu/style_daio_green.jpg",
+    "jeffwu/style_daio_purple2.jpg",
+    "jeffwu/style_daio_abstract10.jpg",
+    "jeffwu/style_daio_sketch5.jpg",
+    "jeffwu/style_daio_music.jpg",
+    "jeffwu/style_daio_abstract11.jpg",
+    "jeffwu/style_daio_abstract12.jpg",
+    "jeffwu/style_daio_colorful4.jpg",
+    "jeffwu/style_daio_dragon.jpg",
+    "jeffwu/style_daio_painting5.jpg",
+    "jeffwu/style_daio_painting6.jpg",
+    "jeffwu/style_daio_sketch6.jpg",
+    "jeffwu/style_daio_sketch7.jpg",
+    // bad ones
+    "jeffwu/style_daio_jaguar.jpg",
+    // "jeffwu/style_daio_strands.jpg",
+    // "jeffwu/style_daio_trinkets.jpg",
+    // "jeffwu/style_daio_mosaic3.jpg",
+    // "jeffwu/style_daio_mesh.jpg",
+    // "jeffwu/style_daio_gray.jpg",
     // "jeffwu/style_daio_child.jpg",
     // "jeffwu/style_daio_flowers.jpg",
     // "jeffwu/style_daio_wisps.jpg",
-  ];
-
-  var ending1 = [
+    // "jeffwu/style_daio_colorful3.jpg",
+    // ending 1?
     "jeffwu/style_daio_circuit.jpg",
     "jeffwu/style_daio_matrix.jpg",
-  ];
-  var ending2 = [
-    "jeffwu/style_daio_paperclipscolor.jpg",
-    "jeffwu/style_daio_paperclipscolor2.jpg",
-  ];
-  var ending3 = [
+    // ending 2?
+    "jeffwu/style_daio_paperclips.jpg",
+    // "jeffwu/style_daio_paperclipscolor.jpg",
+    // "jeffwu/style_daio_paperclipscolor2.jpg",
+    // ending 3?
     "jeffwu/style_daio_stars.jpg",
-    "jeffwu/style_daio_stars2.jpg",
+    // "jeffwu/style_daio_stars2.jpg",
   ];
   var secondaryIndex = 0;
   function secondaryFadeIn() {
@@ -111,18 +145,18 @@ Hi!  Welcome to the personal website of Jeff Wu.
       }
     } else {
       setImage(secondaryImage, secondaryPics[secondaryIndex]);
-      // secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
-      // secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
     }
     secondaryImage.style.opacity = 1;
-    secondaryImage.title = 'Testing';
+    // secondaryImage.title = 'Testing';
     primaryImage.style.opacity = 0;
   }
   function secondaryFadeOut() {
-    if (secondaryIndex == secondaryPics.length) {
-      setImage(primaryImage, 'jeffwu/style_daio_paperclips.jpg');
-    }
-    secondaryIndex = secondaryIndex + 1;
+    // if (secondaryIndex == secondaryPics.length) {
+    //   setImage(primaryImage, 'jeffwu/style_daio_paperclips.jpg');
+    // }
+    // secondaryIndex = secondaryIndex + 1;
+    // secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
+    secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
     secondaryImage.style.opacity = 0;
     primaryImage.style.opacity = 1;
   }
