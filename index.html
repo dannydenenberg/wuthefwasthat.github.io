@@ -40,12 +40,18 @@ Hi!  Welcome to the personal website of Jeff Wu.
   var primaryImage = document.getElementById('primary-jeffwu');
   var secondaryImage = document.getElementById('secondary-jeffwu');
 
-  function setImage(image, path) {
+  function fetchImage(path, cb) {
     var image_loader = new Image();
     image_loader.src = 'assets/images/' + path;
     image_loader.onload = function () {
-      image.src = image_loader.src;
+      cb(image_loader);
     };
+  }
+
+  function setImage(image, path) {
+    fetchImage(path, function(image_loader) {
+      image.src = image_loader.src;
+    })
   }
 
   var secondaryPics = [
@@ -135,17 +141,13 @@ Hi!  Welcome to the personal website of Jeff Wu.
     "jeffwu/style_daio_stars.jpg",
     // "jeffwu/style_daio_stars2.jpg",
   ];
-  var secondaryIndex = 0;
+
+  var setSecondaryImage;
   function secondaryFadeIn() {
-    if (secondaryIndex >= secondaryPics.length) {
-      if ((secondaryIndex - secondaryPics.length) % 2 == 0) {
-        setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor.jpg');
-      } else {
-        setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor2.jpg');
-      }
-    } else {
-      setImage(secondaryImage, secondaryPics[secondaryIndex]);
+    if (setSecondaryImage === null) {
+      return;
     }
+    setSecondaryImage();
     secondaryImage.style.opacity = 1;
     // secondaryImage.title = 'Testing';
     primaryImage.style.opacity = 0;
@@ -156,10 +158,33 @@ Hi!  Welcome to the personal website of Jeff Wu.
     // }
     // secondaryIndex = secondaryIndex + 1;
     // secondaryIndex = (secondaryIndex + 1) % secondaryPics.length;
-    secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
     secondaryImage.style.opacity = 0;
     primaryImage.style.opacity = 1;
+    fetchSecondary();
   }
+
+  var fetching = false;
+  function fetchSecondary() {
+    if (fetching) { return; }
+    fetching = true;
+    var secondaryIndex = Math.floor(Math.random() * secondaryPics.length);
+    // if (secondaryIndex >= secondaryPics.length) {
+    //   if ((secondaryIndex - secondaryPics.length) % 2 == 0) {
+    //     setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor.jpg');
+    //   } else {
+    //     setImage(secondaryImage, 'jeffwu/style_daio_paperclipscolor2.jpg');
+    //   }
+    // } else {
+    //   setImage(secondaryImage, secondaryPics[secondaryIndex]);
+    // }
+    fetchImage(secondaryPics[secondaryIndex], function(image_loader) {
+      setSecondaryImage = function() {
+        secondaryImage.src = image_loader.src;
+      };
+      fetching = false;
+    });
+  }
+  fetchSecondary();
 
   secondaryImage.addEventListener("mouseover", secondaryFadeIn);
   secondaryImage.addEventListener("mouseout", secondaryFadeOut);
