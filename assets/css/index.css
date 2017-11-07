@@ -1,0 +1,32 @@
+#main-text {
+  font-size: 12pt;
+}
+#image-container {
+  position: relative;
+}
+.jeffwu-image {
+   position: absolute;
+   margin-bottom: 50px;
+   z-index: -1;
+   height: auto;
+   width: 100%;
+   -webkit-transition: opacity 2s ease-in-out;
+   -moz-transition: opacity 2s ease-in-out;
+   -o-transition: opacity 2s ease-in-out;
+   -ms-transition: opacity 2s ease-in-out;
+   transition: opacity 2s ease-in-out;
+
+   /*
+   -webkit-transition: background 2s linear;
+   -moz-transition: background 2s linear;
+   -o-transition: background 2s linear;
+   -ms-transition: background 2s linear;
+   transition: background 2s linear;
+   */
+}
+#primary-jeffwu {
+  opacity: 1
+}
+#secondary-jeffwu {
+  opacity: 0
+}
