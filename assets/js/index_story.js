@@ -131,8 +131,6 @@ var secondaryPics = [
         ""],
   ["jeffwu/style_daio_abstract11.jpg",
         ""],
-  ["jeffwu/style_daio_sketch2.jpg",
-        ""],
   ["jeffwu/style_daio_strands.jpg",
         "Well, this \"art\" is undoubtedly getting worse again."],
   ["jeffwu/style_daio_sketch5.jpg",

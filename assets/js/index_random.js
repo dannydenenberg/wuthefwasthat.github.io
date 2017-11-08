@@ -99,7 +99,7 @@ var secondaryPics = [
   "jeffwu/style_daio_abstract2.jpg",
   "jeffwu/style_daio_news.jpg",
   "jeffwu/style_daio_abstract11.jpg",
-  "jeffwu/style_daio_sketch2.jpg",
+  "jeffwu/style_daio_stars.jpg",
   "jeffwu/style_daio_vangogh.jpg",
   "jeffwu/style_daio_strands.jpg",
   "jeffwu/style_daio_sketch.jpg",
@@ -133,10 +133,8 @@ var secondaryPics = [
   "jeffwu/style_daio_colorful6.jpg",
   "jeffwu/style_daio_painting13.jpg",
   "jeffwu/style_daio_hexagons.jpg",
-  "jeffwu/style_daio_gold.jpg",
-
   "jeffwu/style_daio_metal.jpg",
-  "jeffwu/style_daio_stars.jpg",
+  "jeffwu/style_daio_gold.jpg",
 
   // "jeffwu/style_daio_painting12.jpg",
   // "jeffwu/style_daio_painting8.jpg",
