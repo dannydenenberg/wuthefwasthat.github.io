@@ -71,23 +71,22 @@ var secondaryPics = [
   "jeffwu/style_daio_child.jpg",
   "jeffwu/style_daio_matrix.jpg",
   "jeffwu/style_daio_napkin.jpg",
+  "jeffwu/style_daio_rainbowclouds.jpg",
   "jeffwu/style_daio_calvin.jpg",
   "jeffwu/style_daio_sketch2.jpg",
 
   "jeffwu/style_daio_abstract_green.jpg",
   "jeffwu/style_daio_city.jpg",
   "jeffwu/style_daio_colorful7.jpg",
-  "jeffwu/style_daio_colorful8.jpg",
   "jeffwu/style_daio_comics.jpg",
   "jeffwu/style_daio_mosaic5.jpg",
   "jeffwu/style_daio_painting14.jpg",
+  "jeffwu/style_daio_colorful8.jpg",
   "jeffwu/style_daio_atla.jpg",
   "jeffwu/style_daio_painting15.jpg",
-  "jeffwu/style_daio_rainbowstars.jpg",
   "jeffwu/style_daio_scales.jpg",
   "jeffwu/style_daio_sketch8.jpg",
   "jeffwu/style_daio_smbc.jpg",
-  "jeffwu/style_daio_nodes.jpg",
 
   "jeffwu/style_daio_triangle.jpg",
   "jeffwu/style_daio_leaves.jpg",
@@ -101,8 +100,6 @@ var secondaryPics = [
   "jeffwu/style_daio_abstract8.jpg",
 
   "jeffwu/style_daio_colorful2.jpg",
-  "jeffwu/style_daio_nodes_color.jpg",
-  "jeffwu/style_daio_rainbows.jpg",
 
 
   // "jeffwu/style_daio_starry_night2.jpg",
@@ -139,6 +136,7 @@ var secondaryPics = [
   "jeffwu/style_daio_abstract12.jpg",
 
   "jeffwu/style_daio_notebook.jpg",
+  "jeffwu/style_daio_painting2.jpg",
   "jeffwu/style_daio_questions.jpg",
   "jeffwu/style_daio_colorful4.jpg",
   "jeffwu/style_daio_bear.jpg",
@@ -159,17 +157,17 @@ var secondaryPics = [
   // "jeffwu/style_daio_painting12.jpg",
   // "jeffwu/style_daio_mesh.jpg",
   // "jeffwu/style_daio_music.jpg",
-  // "jeffwu/style_daio_abstract7.jpg",
   // "jeffwu/style_daio_painting11.jpg",
   // "jeffwu/style_daio_sketch3.jpg",
   // "jeffwu/style_daio_abstract14.jpg",
-  // "jeffwu/style_daio_painting2.jpg",
   // "jeffwu/style_daio_painting4.jpg",
   // "jeffwu/style_daio_painting10.jpg",
   // "jeffwu/style_daio_painting5.jpg",
   // "jeffwu/style_daio_sketch.jpg",
   // "jeffwu/style_daio_ssbm.jpg",
   // "jeffwu/style_daio_stars2.jpg",
+  // "jeffwu/style_daio_rainbows.jpg",
+  // "jeffwu/style_daio_rainbowstars.jpg",
 ];
 
 var setSecondaryImage = null;
