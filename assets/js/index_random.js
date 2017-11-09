@@ -87,6 +87,7 @@ var secondaryPics = [
   "jeffwu/style_daio_scales.jpg",
   "jeffwu/style_daio_sketch8.jpg",
   "jeffwu/style_daio_smbc.jpg",
+  "jeffwu/style_daio_nodes.jpg",
 
   "jeffwu/style_daio_triangle.jpg",
   "jeffwu/style_daio_leaves.jpg",
@@ -100,13 +101,15 @@ var secondaryPics = [
   "jeffwu/style_daio_abstract8.jpg",
 
   "jeffwu/style_daio_colorful2.jpg",
-  "jeffwu/style_daio_fruit.jpg",
+  "jeffwu/style_daio_nodes_color.jpg",
+  "jeffwu/style_daio_rainbows.jpg",
 
 
   // "jeffwu/style_daio_starry_night2.jpg",
   "jeffwu/style_daio_abstract6.jpg",
   "jeffwu/style_daio_circuit.jpg",
   "jeffwu/style_algo_green.jpg",
+  "jeffwu/style_daio_fruit.jpg",
   "jeffwu/style_daio_abstract3.jpg",
   "jeffwu/style_daio_points.jpg",
 
@@ -119,7 +122,6 @@ var secondaryPics = [
   "jeffwu/style_daio_stars.jpg",
   "jeffwu/style_daio_vangogh.jpg",
   "jeffwu/style_daio_strands.jpg",
-  "jeffwu/style_daio_sketch.jpg",
   "jeffwu/style_daio_map.jpg",
   "jeffwu/style_la_muse.jpg",
   "jeffwu/style_daio_abstract9.jpg",
@@ -150,23 +152,24 @@ var secondaryPics = [
   "jeffwu/style_daio_colorful6.jpg",
   "jeffwu/style_daio_painting13.jpg",
   "jeffwu/style_daio_hexagons.jpg",
+  "jeffwu/style_daio_mosaic.jpg",
   "jeffwu/style_daio_metal.jpg",
   "jeffwu/style_daio_gold.jpg",
 
   // "jeffwu/style_daio_painting12.jpg",
-  // "jeffwu/style_daio_painting8.jpg",
   // "jeffwu/style_daio_mesh.jpg",
   // "jeffwu/style_daio_music.jpg",
   // "jeffwu/style_daio_abstract7.jpg",
   // "jeffwu/style_daio_painting11.jpg",
-  // "jeffwu/style_daio_mosaic.jpg",
   // "jeffwu/style_daio_sketch3.jpg",
-  // "jeffwu/style_daio_sketch5.jpg",
   // "jeffwu/style_daio_abstract14.jpg",
   // "jeffwu/style_daio_painting2.jpg",
   // "jeffwu/style_daio_painting4.jpg",
   // "jeffwu/style_daio_painting10.jpg",
   // "jeffwu/style_daio_painting5.jpg",
+  // "jeffwu/style_daio_sketch.jpg",
+  // "jeffwu/style_daio_ssbm.jpg",
+  // "jeffwu/style_daio_stars2.jpg",
 ];
 
 var setSecondaryImage = null;
