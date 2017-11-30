@@ -4,7 +4,7 @@ permalink: /favorites/
 ---
 
 Here are some lists of my favorite things.
-Individual lists are roughly ordered by how much I like them.
+Individual lists are very roughly ordered by how much I like them.
 
 If you have recommendations based on these lists, please let me know!
 Also, hope you find some new gems!
@@ -12,20 +12,28 @@ Also, hope you find some new gems!
 ## Games
 
 Puzzle games
-- [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on)
 - Braid
-- [Jelly No Puzzle](http://heated.github.io/jelly)
+- Recursed
+- [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on)
 - Stephen's Sausage Roll
 - [Manufactoria](http://pleasingfungus.com/Manufactoria/)
+- [Jelly No Puzzle](http://heated.github.io/jelly)
 - Snakebird
-- Trainyard
+- Monument Valley
+- The Witness
+- So Broken
 - [Marbles](http://marblespuzzle.com/)
+- Corrypt
+- Trainyard
+- Portal
+- The Swapper
 
 Board/card games
 - Dominion
 - Hanabi
 - Quoridor
-- Tichu
+- Poker deck games:
+  - Trick taking: Tichu, Haggis, Spades, Napolean, etc.
 
 Mystery hunt puzzles
 - [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
@@ -57,7 +65,9 @@ Web serial
 
 Blogs/posts
 - [Wait but Why](https://waitbutwhy.com/)
-- Various posts from Paul Christiano: [Integrity for Consequentialists](https://sideways-view.com/2016/11/14/integrity-for-consequentialists/), [The Monkey and the Machine](https://sideways-view.com/2017/02/19/the-monkey-and-the-machine-a-dual-process-theory/), [Security and AI Alignment](https://ai-alignment.com/security-and-ai-control-675ace05ce31)
+- [Various writing](https://paulfchristiano.com/blogs/) from Paul Christiano.  I especially recommend:
+  - [Integrity for Consequentialists](https://sideways-view.com/2016/11/14/integrity-for-consequentialists/)
+  - [The Monkey and the Machine](https://sideways-view.com/2017/02/19/the-monkey-and-the-machine-a-dual-process-theory/)
 - Chris Olah's [personal blog](http://colah.github.io/) and [Distill.pub](http://distill.pub/)
 - [Hyperbole and a Half](https://hyperboleandahalf.blogspot.com/)
 - Slate Star Codex: [Against tulip subsidies](http://slatestarcodex.com/2015/06/06/against-tulip-subsidies/) and [a book review of The Hungry Brain](http://slatestarcodex.com/2017/04/25/book-review-the-hungry-brain/)
@@ -97,7 +107,9 @@ Classical
 - *Cafe Music* by Schoenfield
 - Mahler
 - Tchaikovsky's 6th symphony
-, Symphonic Dances from Westside Story, Piazzolla
+- Symphonic Dances from Westside Story
+- Piazzolla
+- Claude Bolling
 
 Pop
 - *Bohemian Rhaspody* by Queen
