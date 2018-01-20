@@ -2,3 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 .DS_Store
+assets/resume.aux
+assets/resume.log
+assets/resume.out
+assets/resume.synctex.gz

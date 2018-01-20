@@ -1,5 +1,6 @@
 To install:
-- Install ruby and bundler
+- Install ruby
+- Install bundler: `gem install bundler`
 - `bundle install`
 
 To run locally:
