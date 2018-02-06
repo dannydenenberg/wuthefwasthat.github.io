@@ -36,6 +36,7 @@ Board/card games
   - Trick taking: Tichu, Haggis, Spades, Napolean, etc.
 
 Mystery hunt puzzles
+*(disclaimer: haven't done many)*
 - [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
 - [Functions](http://web.mit.edu/puzzle/www/2012/puzzles/phantom_of_the_operator/functions/)
 - [Three Colours](http://puzzle.cisra.com.au/2013/5D-Three-Colours.pdf)
@@ -45,14 +46,15 @@ Miscellaneous
 - DDR (largely because it doubles as exercise)
 - Monument Valley (maybe more art than game)
 
-## Writing
+## Writings
 
 *Disclaimer: I don't read much*
 
 Short stories
 - *Story of Your Life* by Ted Chiang
-- [Scott Alexander's pill story blog post](http://slatestarcodex.com/2015/06/02/and-i-show-you-how-deep-the-rabbit-hole-goes/)
 - *Understand* by Ted Chiang
+- [Scott Alexander's pill story](http://slatestarcodex.com/2015/06/02/and-i-show-you-how-deep-the-rabbit-hole-goes/)
+- [Scott Alexander's story of alchemy](http://slatestarcodex.com/2017/11/09/ars-longa-vita-brevis/)
 - *The Moral Virologist* by Greg Egan
 - *Learning to Be Me* by Greg Egan
 
@@ -70,7 +72,10 @@ Blogs/posts
   - [The Monkey and the Machine](https://sideways-view.com/2017/02/19/the-monkey-and-the-machine-a-dual-process-theory/)
 - Chris Olah's [personal blog](http://colah.github.io/) and [Distill.pub](http://distill.pub/)
 - [Hyperbole and a Half](https://hyperboleandahalf.blogspot.com/)
+
+{::comment}
 - Slate Star Codex: [Against tulip subsidies](http://slatestarcodex.com/2015/06/06/against-tulip-subsidies/) and [a book review of The Hungry Brain](http://slatestarcodex.com/2017/04/25/book-review-the-hungry-brain/)
+{:/comment}
 
 Youtube
 - [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
@@ -82,13 +87,14 @@ Youtube
 
 Movies
 - American Beauty
-- Ratatouille
-- Zootopia
-- Interstellar
-- Contact
 - Arrival
-- Wreck-It Ralph
+- Contact
 - Inside Out
+- Interstellar
+- Phantom Boy
+- Ratatouille
+- Wreck-It Ralph
+- Zootopia
 
 Shows
 - Avatar the last Airbender

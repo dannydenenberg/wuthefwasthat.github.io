@@ -1,12 +1,11 @@
 #main-text {
   font-size: 12pt;
+  margin-top: 20px;
 }
 #image-container {
   position: relative;
 }
 .jeffwu-image {
-   position: absolute;
-   margin-bottom: 50px;
    z-index: -1;
    height: auto;
    width: 100%;
@@ -28,5 +27,6 @@
   opacity: 1
 }
 #secondary-jeffwu {
+  position: absolute;
   opacity: 0
 }

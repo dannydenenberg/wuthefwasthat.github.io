@@ -218,7 +218,7 @@ function fetchSecondary() {
 }
 fetchSecondary();
 
-secondaryImage.addEventListener("mouseover", secondaryFadeIn);
-secondaryImage.addEventListener("mouseout", secondaryFadeOut);
-secondaryImage.addEventListener("touchstart", secondaryFadeIn);
-secondaryImage.addEventListener("touchend", secondaryFadeOut);
+primaryImage.addEventListener("mouseover", secondaryFadeIn);
+primaryImage.addEventListener("mouseout", secondaryFadeOut);
+primaryImage.addEventListener("touchstart", secondaryFadeIn);
+primaryImage.addEventListener("touchend", secondaryFadeOut);
