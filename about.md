@@ -22,12 +22,12 @@ In my free time, I like to:
 
 ## History
 
-I've been lucky to have a very enjoyable life. A brief history of me:
-- I was born in San Diego, where I grew up (except a stint in the Bay Area years 1 to 8).
+I've been lucky to have had a very enjoyable life. A brief history of me:
+- I was born in San Diego, where I grew up (except a stint in the Bay Area years 2 through 9).
   I spent much of my time on games and the internet.  My main accomplishment in life was getting into college.
-- I then spent 4.5 years studying math and CS at MIT, where I learned a ton, met amazing people, and had loads of fun.
-  I liked it so much I stayed for a Master's working on probabilistic programming languages.
-- Armed with only theory knowledge, I moved to San Francisco to be the second employee at Terminal.com, a startup providing computer environments in the browser, where I spent almost 4 years.
-  The company was later acquired by Udacity.
+- I then went to MIT, where I learned a ton of math and CS, met amazing people, and had lots of fun.
+  I enjoyed it so much I stayed for a Master's working on probabilistic programming languages, partially to avoid the real world.
+- Armed with only theory knowledge, I moved to San Francisco to be the second employee at Terminal.com,
+  a startup providing computer environments in the browser. I left after nearly 4 years; the company was later acquired by Udacity.
 - I'm now at Google, working on deep learning for user personalization.
-  My team is partially responsible for Google creepily understanding you from your past history.
+  My team is partially responsible for Google creepily understanding you based on your past history of Google product usage.
