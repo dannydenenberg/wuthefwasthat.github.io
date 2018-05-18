@@ -11,22 +11,22 @@ Also, hope you find some new gems!
 
 ## Games
 
-Puzzle games
+Puzzle games ([see here](/puzzlegames) for a more complete list with ratings).
 - Braid
 - Recursed
-- [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on)
 - Stephen's Sausage Roll
-- [Manufactoria](http://pleasingfungus.com/Manufactoria/)
+- [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on) series
 - [Jelly No Puzzle](http://heated.github.io/jelly)
-- Snakebird
-- Monument Valley
+- [Manufactoria](http://pleasingfungus.com/Manufactoria/)
 - The Witness
-- So Broken
-- [Marbles](http://marblespuzzle.com/)
-- Corrypt
-- Trainyard
+- Snakebird
+- Monument Valley series
 - Portal
 - The Swapper
+- So Broken
+- [Marbles](http://marblespuzzle.com/)
+- Trainyard
+- Corrypt
 
 Board/card games
 - Dominion
@@ -35,16 +35,15 @@ Board/card games
 - Poker deck games:
   - Trick taking: Tichu, Haggis, Spades, Napolean, etc.
 
+Miscellaneous games
+- Super Smash Brothers Melee
+- DDR (largely because it doubles as exercise)
+
 Mystery hunt puzzles
 *(disclaimer: haven't done many)*
 - [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
 - [Functions](http://web.mit.edu/puzzle/www/2012/puzzles/phantom_of_the_operator/functions/)
 - [Three Colours](http://puzzle.cisra.com.au/2013/5D-Three-Colours.pdf)
-
-Miscellaneous
-- Super Smash Brothers Melee
-- DDR (largely because it doubles as exercise)
-- Monument Valley (maybe more art than game)
 
 ## Writings
 
