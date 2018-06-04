@@ -7,11 +7,11 @@
 
 # Site settings
 title: Jeff Wu
-email: wuthefwasthat@gmail.com
+email: hi@wuthejeff.com
 description: >
   Personal website of Jeff Wu
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wuthefwasthat.github.io/" # the base hostname & protocol for your site
+url: "http://wuthejeff.com/" # the base hostname & protocol for your site
 twitter_username:
 github_username: wuthefwasthat
 
