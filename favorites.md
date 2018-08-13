@@ -40,6 +40,7 @@ Mystery hunt puzzles
 - [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
 - [Functions](http://web.mit.edu/puzzle/www/2012/puzzles/phantom_of_the_operator/functions/)
 - [Three Colours](http://puzzle.cisra.com.au/2013/5D-Three-Colours.pdf)
+- [Earth Shattering](https://galacticpuzzlehunt.com/puzzle/earth-shattering)
 
 Miscellaneous
 - Super Smash Brothers Melee

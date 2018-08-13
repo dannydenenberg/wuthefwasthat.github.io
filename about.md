@@ -29,5 +29,7 @@ I've been lucky to have had a very enjoyable life. A brief history of me:
   I enjoyed it so much I stayed for a Master's working on probabilistic programming languages, partially to avoid the real world.
 - Armed with only theory knowledge, I moved to San Francisco to be the second employee at Terminal.com,
   a startup providing computer environments in the browser. I left after nearly 4 years; the company was later acquired by Udacity.
-- I'm now at Google, working on deep learning for user personalization.
-  My team is partially responsible for Google creepily understanding you based on your past history of Google product usage.
+- I then spent 2 years at Google working on deep learning for user personalization.
+  My team was partially responsible for Google creepily understanding you based on your past history of Google product usage.  I did a mix of infrastructure and research.
+- I'm now at OpenAI, working on the safety team.
+  We're trying to ensure that human level artificial intelligence will be beneficial to humanity!
