@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Security needs distribution needs security"
+date:   2016-06-29 10:18:32 -0700
+categories: programming math
+comments: true
+---
+
+
+Many people fear AI will be an existential risk for humans.
+There are
+
+I think fundamentally, the easiest way to seize lots of power quickly, is to compromise the security of and seize control of existing systems.
+For example, the roadmap of a rogue AI might look something like this:
+- Hack into IoT devices, amass lots of compute
+- Penetrate Pentagon defences
+- Threaten humans into giving up more power
+
+Insecurity of IoT devices: https://www.troyhunt.com/what-would-it-look-like-if-we-put-warnings-on-iot-devices-like-we-do-cigarette-packets/
