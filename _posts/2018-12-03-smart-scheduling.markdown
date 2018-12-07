@@ -6,31 +6,35 @@ categories: productivity
 comments: true
 ---
 
-I would like an app where the main screen is extremely minimal: in big font, it tells me what I should do.
+I would like an app where the main interface is extremely minimal: in big font, it tells me what I should do.
 
 Whenever there's something I would like to do later, I simply speak to the app - it parses my request and reorganizes my schedule.
 
-The app should be dead simple to use, and cover most functionality of todo lists and calendars, with advantages over both.
+The app should be dead simple to use, and give you the best of todo lists, calendars, time-tracking apps, and more.
 
 ## Motivation: premeditated planning
 
 In general, I often find myself with free time and no particular idea of what I should do.
 On the other hand, occasionally I think of things which aren't habitual, but that I should be doing more of, e.g. calling my family.
-But when the free time comes along, it takes a lot of cognitive overhead to think of something I should plausibly be doing.
-Ideally, I should be able to premeditate about how I would like my free time to be spent, and then act faithfully on that.
+But when the free time comes along, it takes much more effort to remember things I should be doing.
+Ideally, I should premeditate about how I'd like to spend my time, and then later act faithfully on that without with low cognitive overhead.
 
-I like to think of there as being two modes, "CEO" and "worker".  Realistically, you might fluidly between the two modes. Overall, though, most time is spent in "worker" mode.
-So CEO me has already entered a list of all things I want to do (and how badly or by when I want them done), into some app.
-Now worker me just repeatedly does *whatever the app says*.
-If I take longer to do a task than expected, or I lacked the willpower to do it, I tell the app, so that I can plan better next time.
-The app is my boss, but since I programmed it, I'm my own boss.
+You can imagine yourself in two possible modes, "CEO" and "worker".  Most time is spent in "worker" mode, doing things "CEO" you decided.
+(Realistically, you might fluidly switch between the two modes, but ideally not too much.)
+To facilitate this, we use software:  CEO me enters a list of things to do (and priorities and deadlines) into some app, and worker me repeatedly does *whatever the app says*.
+
+If I take longer to do a task than expected or lacked the willpower to do it, I tell the app, so that I can plan better next time.
+The app is my boss, but since I program it, I'm my own boss.
 
 ## Advantages over existing solutions
 
-Absorbing the functionality of both todo lists and calendars gives additional advantages.  For example:
+Absorbing the functionality of both todo lists and calendars gives additional advantages.
+Fundamentally, this is because both are tracking ways you should spend time.
+Here are some examples:
 
 - When I add an event, it can tell me what the marginal time would've been used for.  Is that acquaintance's birthday party really better than an hour of running or playing music? This is especially useful for people who tend to over-schedule themselves.
-- When I have a list of things to do for unstructured time, it's harder to make a habit of following it.  If that list is also your calendar, you might find it easier to stick to.
+- There's less cognitive overhead if only using a single mechanism to decide what to do.  When I have todo list only for unstructured time, it's hard to make a habit of following it.  If that list is also your calendar, you might find it easier to stick to.
+- It's easy to see overviews of your time spent, if it's all in one place.  So time-tracking comes nearly for free.
 
 ## Interface details
 
@@ -73,7 +77,7 @@ You can also ask for summaries of what you've done, which brings you to a differ
 - See a list of tasks that were neglected compared to your stated priority levels or desired time spent
 - See a list of tasks that took longer than you expected
 
-### Some desirable bells and whistles
+### Bells and whistles
 
 Obviously this app is not entirely fleshed out.  For example:
 
@@ -96,8 +100,6 @@ For example, instead of natural language, you could plan by entering:
 ## Conclusion
 
 I would be very happy if someone implemented something like this.  If you are interested, please let me know!
-
-I had the idea for this app over a year ago, and have many other ideas surrounding it, but never finished writing this post.  I blame the lack of the app for my demise and for my failure blog consistently.
 
 Some suggestions for the name of such an app:
 - Lachesis or Decima, the second of the Three Fates who measured and apportioned the thread of life.
