@@ -12,6 +12,7 @@ Also, hope you find some new gems!
 ## Games
 
 Puzzle games
+- Baba is You
 - Braid
 - Recursed
 - [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on)
@@ -43,6 +44,7 @@ Mystery hunt puzzles
 - [Earth Shattering](https://galacticpuzzlehunt.com/puzzle/earth-shattering)
 
 Miscellaneous
+- Super Smash Brothers Ultimate
 - Super Smash Brothers Melee
 - DDR (largely because it doubles as exercise)
 - Monument Valley (maybe more art than game)
