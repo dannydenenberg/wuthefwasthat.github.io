@@ -11,43 +11,28 @@ Also, hope you find some new gems!
 
 ## Games
 
-Puzzle games
-- Baba is You
-- Braid
-- Recursed
-- [Blocks with Letters On](http://www.kongregate.com/games/morpheme/blocks-with-letters-on)
-- Stephen's Sausage Roll
-- [Manufactoria](http://pleasingfungus.com/Manufactoria/)
-- [Jelly No Puzzle](http://heated.github.io/jelly)
-- Snakebird
-- Monument Valley
-- The Witness
-- So Broken
-- [Marbles](http://marblespuzzle.com/)
-- Corrypt
-- Trainyard
-- Portal
-- The Swapper
+I primarily play [puzzle games](puzzle_games.md) and Super Smash Brothers (Melee and Ultimate).
+I also enjoy many board and card games, most notably Dominion.
+I play some DDR as well, mainly because it doubles as exercise.
 
-Board/card games
-- Dominion
-- Hanabi
-- Quoridor
+<!--
+- Other board games
+  - Hanabi
+  - Quoridor
 - Poker deck games:
-  - Trick taking: Tichu, Haggis, Spades, Napolean, etc.
+  - Trick taking: Tichu, Haggis, Spades, Oh Hell, Napolean, etc.
+- Social manipulation games, e.g. One Night Werewolf
+- Prop-less games
+  - GOTHS, contact, double contact, category (on a timer)
+-->
 
-Mystery hunt puzzles
-*(disclaimer: haven't done many)*
-- [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
+## Mystery hunt puzzles
+
+*Disclaimer: haven't done many*
 - [Functions](http://web.mit.edu/puzzle/www/2012/puzzles/phantom_of_the_operator/functions/)
+- [Rime Royal](http://puzzle.cisra.com.au/2011/3D-Rime-Royal.pdf)
 - [Three Colours](http://puzzle.cisra.com.au/2013/5D-Three-Colours.pdf)
 - [Earth Shattering](https://galacticpuzzlehunt.com/puzzle/earth-shattering)
-
-Miscellaneous
-- Super Smash Brothers Ultimate
-- Super Smash Brothers Melee
-- DDR (largely because it doubles as exercise)
-- Monument Valley (maybe more art than game)
 
 ## Writings
 
