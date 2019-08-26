@@ -7,6 +7,10 @@ permalink: /projects/
 
 Here are some projects I've worked on:
 
+{::comment}
+- **GPT-2** [[blog post](https://openai.com/blog/better-language-models/)] [[source](https://github.com/openai/gpt-2)]
+  training and evaluating language models
+{:/comment}
 - **vimflowy** [[demo](http://vimflowy.netlify.com)] [[source](https://github.com/WuTheFWasThat/vimflowy)]:
   a Workflowy-like productivity tool with vim keybindings
 - **PyChurch** [[source](https://github.com/WuTheFWasThat/Church-interpreter)] and [[thesis writeup](https://github.com/WuTheFWasThat/PyChurch/blob/master/papers/MEng%20thesis.pdf)]:

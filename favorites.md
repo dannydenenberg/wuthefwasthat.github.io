@@ -67,6 +67,7 @@ Blogs/posts
 
 Youtube
 - [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+- [acapellascience](https://www.youtube.com/user/acapellascience)
 
 {::comment}
 ## Movies/shows/videos
